@@ -2107,6 +2107,7 @@ void MusicXmlInput::ReadMusicXmlDirection(
         std::string wordStr = words.first().node().text().as_string();
         if (wordStr.rfind("cresc", 0) == 0 || wordStr.rfind("dim", 0) == 0 || wordStr.rfind("decresc", 0) == 0) {
             containsDynamics = true;
+            defaultY += 10000;
         }
         else {
             Dir *dir = new Dir();
